@@ -7,7 +7,7 @@ function App() {
   const [movies, setMovies] = useState(movieList)
 
   return (
-    <div>
+    <div className='everything'>
       <MovieList movieList={movies}/>
     </div>
   )

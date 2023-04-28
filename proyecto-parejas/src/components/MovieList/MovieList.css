@@ -1,15 +1,25 @@
+h1 {
+    font-size: 20px;
+    text-align: start;
+}
+
 .movie__list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
+    table-layout: fixed;
+    width: 100%;
+    text-align: center;    
+}
+.movie__list__titles th {
+    border-bottom:2px dotted rgb(95, 95, 95);
 }
 
-.movie__list__item {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+.movie__list__item td {
+    border-bottom: 1px solid black;
+    /* text-align: center;    */
+}
+td button {
+    font-size: 14px;
+    margin: 5px;
+    padding: 2px 6px;
 }
 
-h3 {
-    margin: 10px 30px;
-}
+
