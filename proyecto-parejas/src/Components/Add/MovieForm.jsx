@@ -27,9 +27,6 @@ function AddMovie({onAddMovie, selectMovie}) {
   
 
   
-  // const handleReset = ()=>{
-  // }
-
   return (
       <div className="container">
         <h2 className="add-form__title">Add New Movie</h2>
