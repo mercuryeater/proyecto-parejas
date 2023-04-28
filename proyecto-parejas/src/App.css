@@ -1,5 +1,11 @@
 #root {
-  max-width: 1280px;
+  width: 100%;  
   margin: 0 auto;
   padding: 2rem;
+}
+
+.everything {
+  display: inline-block;
+  align-items: center;
+  width: 100%;
 }
