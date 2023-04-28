@@ -1,0 +1,15 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+/* button{
+    background-color: black;
+    color: white;
+    margin-top: 10px;
+} */
+
+input{
+    margin-top: 10px;
+    margin-left: 10px;
+}
