@@ -1,0 +1,15 @@
+.movie__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie__list__item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+h3 {
+    margin: 10px 30px;
+}
