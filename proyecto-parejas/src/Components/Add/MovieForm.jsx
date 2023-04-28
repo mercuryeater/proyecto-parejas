@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./movieForm.css"
 
-function AddMovie({onAddMovie}) {
+function AddMovie({onAddMovie, selectMovie}) {
   const [movie, setMovie] = useState({});
 
   const handleAdd = (event) => {
@@ -34,7 +34,7 @@ function AddMovie({onAddMovie}) {
       <div className="container">
         <h2 className="add-form__title">Add New Movie</h2>
         <form className="add-form" onSubmit={handleAdd}>
-          <div>
+          <div >
             <div className="add-form__column">
               <label className="add-form__label">Movie</label>
               <input

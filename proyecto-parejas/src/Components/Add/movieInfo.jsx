@@ -1,22 +1,16 @@
-import { useState } from 'react';
+import { useState } from "react";
+import "./movieInfo.css"
 
+const MovieInfo = (props) => {
+  const { name, rating, genre, year, onSelectMovie } = props;
+  return (
+    <div className="movie-info" onClick ={onSelectMovie}>
+      <div>{name}</div>
+      <div>{rating}</div>
+      <div>{genre}</div>
+      <div>{year}</div>
+    </div>
+  );
+};
 
-const MovieInfo =(props) =>{
-    const {name, rating, genre, year} = props
-return(
-        <table>
-          <tbody>
-            <tr >
-            <td>{name}</td>
-            <td>{rating}</td>
-            <td>{genre}</td>
-            <td>{year}</td>
-          </tr>
-        
-          </tbody>
-        </table>
-
-)
-}
-
-export default MovieInfo
+export default MovieInfo;

@@ -22,17 +22,20 @@ const pelis = [
 
 function App() {
   const [movies, setMovies] = useState(pelis);
+  const [selectMovie, setSelectMovie] = useState(null)
 
   const handleAddMovie = (newMovie) => {
     setMovies([...movies, newMovie]);
   };
 
-  
+  const handleSelect = (movie)=>{
+setSelectMovie(movie)
+  }
 
   return (
     <>
-      <AddMovie onAddMovie={handleAddMovie} />
-      <MovieList movies={movies} />
+      <AddMovie onAddMovie={handleAddMovie} selectMovie = {selectMovie} />
+      <MovieList movies={movies} onSelectMovie = {handleSelect}/>
     </>
   );
 }
