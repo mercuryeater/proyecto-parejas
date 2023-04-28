@@ -1,0 +1,27 @@
+h1 {
+    font-size: 20px;
+    text-align: start;
+}
+
+.movie__list {
+    table-layout: fixed;
+    width: 100%;
+    text-align: center;
+    border: 1px solid rgb(195, 195, 195);
+    border-radius: 10px;
+    /* border-collapse: collapse;     */
+}
+.movie__list__titles th {
+    border-bottom:2px dotted rgb(95, 95, 95);
+}
+
+.movie__list__item td {
+    border-bottom: 1px solid rgb(195, 195, 195);
+}
+td button {
+    font-size: 14px;
+    margin: 5px;
+    padding: 2px 6px;
+}
+
+
