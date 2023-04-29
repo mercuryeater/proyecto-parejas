@@ -13,7 +13,7 @@ function AddMovie({onAddMovie, selectMovie}) {
     onAddMovie(newMovie)
   
     // Clear form
-      setMovie("");
+      setMovie({});
   
   };
   
