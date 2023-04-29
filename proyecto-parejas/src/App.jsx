@@ -3,6 +3,7 @@ import "./App.css";
 import AddMovie from "./Components/Add/MovieForm";
 import MovieList from "./Components/MovieList/MovieList";
 import { movies as movieList } from "./assets/data";
+import Header from "./Components/Header/Header"
 
 import MovieListFC from "./Components/MovieList/MovieList.jsx";
 
@@ -26,8 +27,7 @@ function App() {
     <>
       <Header />
       <AddMovie onAddMovie={handleAddMovie} selectMovie={selectMovie} />
-      <MovieList movies={movies} onSelectMovie={handleSelect} />
-      <MovieListFC movieList={movies} />
+      <MovieList movieList={movies} onSelectMovie={handleSelect} />
     </>
   );
 }

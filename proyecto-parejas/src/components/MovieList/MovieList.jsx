@@ -52,4 +52,4 @@ function MovieList({movieList}) {
   );
 }
 
-export default MovieListFC;
+export default MovieList;
