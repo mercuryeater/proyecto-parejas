@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import AddMovie from "./Components/Add/MovieForm";
-import MovieList from "./Components/Add/movieList";
+import MovieList from "./Components/MovieList/MovieList";
 import { movies as movieList } from "./assets/data";
 
 import MovieListFC from "./Components/MovieList/MovieList.jsx";

@@ -1,7 +1,8 @@
 import "./MovieList.css";
 import { useState } from "react";
+import MovieInfo from "../Add/movieInfo"
 
-function MovieListFC({movieList}) {
+function MovieList({movieList}) {
 
     const [updatedMovies, setUpdatedMovies] = useState(movieList)
 
@@ -33,12 +34,14 @@ function MovieListFC({movieList}) {
         </thead>
 
         <tbody>        
-          {movieList.map( (movie, index) => (
+          {movieList.map( (movie) => (
               <tr key={movie.id} className="movie__list__item">
-                  <td>{movie.name}    </td>
-                  <td>{movie.year}</td>
-                  <td>{movie.genre}</td>
-                  <td>{movie.rating}</td>
+              <MovieInfo
+                  name={movie.name}
+                  year={movie.year}
+                  genre={movie.genre}
+                  rating={movie.rating}
+                />
                   <td><button onClick={ () =>{handleDelete(index)}}>borrar</button>
                   <button onClick={handleEdit}>editar</button></td>
               </tr>
