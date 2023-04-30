@@ -2,17 +2,15 @@ import "./MovieList.css";
 import { useState } from "react";
 import MovieInfo from "../Add/movieInfo"
 
-function MovieList({movieList}) {
+function MovieList({movieList , onDeleteMovie }) {
 
     const [updatedMovies, setUpdatedMovies] = useState(movieList)
-
-
 
     const handleDelete = (index) => {
         console.log('Delete pressed')
         const toDeleteMovie = [...updatedMovies]
         toDeleteMovie.splice(index, 1)
-        setUpdatedMovies(toDeleteMovie)
+        onDeleteMovie(toDeleteMovie)
     };
 
     const handleEdit = (event) => {
@@ -34,14 +32,9 @@ function MovieList({movieList}) {
         </thead>
 
         <tbody>        
-          {movieList.map( (movie) => (
+          {movieList.map( (movie, index) => (
               <tr key={movie.id} className="movie__list__item">
-              <MovieInfo
-                  name={movie.name}
-                  year={movie.year}
-                  genre={movie.genre}
-                  rating={movie.rating}
-                />
+              <MovieInfo props={movie}/>
                   <td><button onClick={ () =>{handleDelete(index)}}>borrar</button>
                   <button onClick={handleEdit}>editar</button></td>
               </tr>

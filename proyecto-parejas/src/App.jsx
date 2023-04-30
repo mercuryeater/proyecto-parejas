@@ -20,14 +20,14 @@ function App() {
   };
 
   const deleteMovie = (toDeleteMovie) => {
-    setMovies([...movies, toDeleteMovie]);
+    setMovies([toDeleteMovie]);
   };
 
   return (
     <>
       <Header />
       <AddMovie onAddMovie={handleAddMovie} selectMovie={selectMovie} />
-      <MovieList movieList={movies} onSelectMovie={handleSelect} />
+      <MovieList movieList={movies} onSelectMovie={handleSelect} onDeleteMovie={deleteMovie} />
     </>
   );
 }
