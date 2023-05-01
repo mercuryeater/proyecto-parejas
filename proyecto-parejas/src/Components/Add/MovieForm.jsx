@@ -1,8 +1,14 @@
 import { useState } from "react";
 import "./movieForm.css"
 
-function AddMovie({onAddMovie, selectMovie}) {
-  const [movie, setMovie] = useState({});
+const defaultMovie = {
+  name: '',
+  year: '',
+  genre: '',
+  rating: '',
+}
+function AddMovie({onAddMovie, selectedMovie}) {
+  const [movie, setMovie] = useState(defaultMovie);
 
   const handleAdd = (event) => {
     event.preventDefault();
@@ -13,7 +19,7 @@ function AddMovie({onAddMovie, selectMovie}) {
     onAddMovie(newMovie)
   
     // Clear form
-    setMovie({});
+    setMovie(defaultMovie);
     
   };
   
@@ -44,6 +50,7 @@ function AddMovie({onAddMovie, selectMovie}) {
                 className="add-form__input"
                 required
                 onChange={handleChange}
+                value = {movie.name} 
               />
             </div>
             <div className="add-form__column">
@@ -55,6 +62,7 @@ function AddMovie({onAddMovie, selectMovie}) {
                 className="add-form__input"
                 required
                 onChange={handleChange}
+                value = {movie.rating}
               />
             </div>
             <div className="add-form__column">
@@ -65,16 +73,18 @@ function AddMovie({onAddMovie, selectMovie}) {
                 className="add-form__input"
                 placeholder="Add Genre"
                 onChange={handleChange}
+                value = {movie.genre}
               />
             </div>
             <div className="add-form__column">
-              <label className="contact-form__label">Year</label>
+              <label className="add-form__label">Year</label>
               <input
                 type="number"
                 name="year"
                 className="add-form__input"
                 placeholder="Add movie year"
                 onChange={handleChange}
+                value = {movie.year}
               />
             </div>
           </div>

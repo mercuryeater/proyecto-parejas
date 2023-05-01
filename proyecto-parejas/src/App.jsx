@@ -9,14 +9,15 @@ import MovieListFC from "./Components/MovieList/MovieList.jsx";
 
 function App() {
   const [movies, setMovies] = useState(movieList);
-  const [selectMovie, setSelectMovie] = useState(null);
+  const [selectedMovie, setSelectedMovie] = useState(null);
 
   const handleAddMovie = (newMovie) => {
     setMovies([...movies, newMovie]);
   };
 
   const handleSelect = (movie) => {
-    setSelectMovie(movie);
+    setSelectedMovie(movie);
+    console.log(movie)
   };
 
   const deleteMovie = (toDeleteMovie) => {
@@ -26,8 +27,8 @@ function App() {
   return (
     <>
       <Header />
-      <AddMovie onAddMovie={handleAddMovie} selectMovie={selectMovie} />
-      <MovieList movieList={movies} onSelectMovie={handleSelect} />
+      <AddMovie onAddMovie={handleAddMovie} selectedMovie={selectedMovie} />
+      <MovieList movieList={movies} onSelectedMovie={handleSelect} />
     </>
   );
 }
