@@ -3,7 +3,7 @@ import "./App.css";
 import AddMovie from "./Components/Add/MovieForm";
 import MovieList from "./Components/MovieList/MovieList";
 import { movies as movieList } from "./assets/data";
-import Header from "./Components/Header/Header"
+import Header from "./Components/Header/Header";
 
 import MovieListFC from "./Components/MovieList/MovieList.jsx";
 
@@ -17,7 +17,7 @@ function App() {
 
   const handleSelect = (movie) => {
     setSelectedMovie(movie);
-    console.log(movie)
+    console.log(movie);
   };
 
   const deleteMovie = (toDeleteMovie) => {

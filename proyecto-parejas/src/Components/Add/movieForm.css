@@ -38,8 +38,15 @@ input {
 }
 
 .add-form__button {
-  background-color: teal;
-  color: white;
+  border: 1px solid teal;
+  color: teal;
   margin-top: 20px;
   margin-left: 170px;
+  font-weight: bold;
 }
+
+.add-form__button:hover{
+background-color: teal;
+color: white;
+}
+
