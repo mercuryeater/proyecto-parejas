@@ -14,7 +14,7 @@ function MovieList({ movieList = [], onSelectedMovie}) {
   const handleEdit = (movie) => {
     onSelectedMovie(movie);
     console.log("Edit pressed");
-    console.log(updatedMovies);
+    // console.log(updatedMovies);
   };
 
   return (

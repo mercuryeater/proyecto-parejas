@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState} from "react";
 import "./movieForm.css"
 
 const defaultMovie = {
@@ -20,6 +20,7 @@ function AddMovie({onAddMovie, selectedMovie}) {
   
     // Clear form
     setMovie(defaultMovie);
+
     
   };
   
