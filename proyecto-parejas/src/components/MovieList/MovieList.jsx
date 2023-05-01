@@ -2,7 +2,7 @@ import "./MovieList.css";
 import { useState } from "react";
 import MovieInfo from "../Add/movieInfo"
 
-function MovieList({movieList=[], onSelectMovie}) {
+function MovieList({movieList=[] }, onSelectMovie) {
 
     const [updatedMovies, setUpdatedMovies] = useState(movieList)
 
@@ -32,16 +32,16 @@ function MovieList({movieList=[], onSelectMovie}) {
         </tr>
         
         {movieList.map( (movie) => (
-            <tr key={movie.id} className="movie__list__item">
+            <div key={movie.id} className="movie__list__item">
               <MovieInfo
                 name={movie.name}
                 year={movie.year}
                 genre={movie.genre}
                 rating={movie.rating}
                 />
-                <td><button onClick={ () =>{handleDelete(index)}}>borrar</button>
-                <button onClick={handleEdit}>editar</button></td>
-            </tr>
+                <div><button onClick={ () =>{handleDelete(index)}}>borrar</button>
+                <button onClick={handleEdit}>editar</button></div>
+            </div>
             // onClick={()=>{handleClick(ID)}}
         ))}        
       </table>
