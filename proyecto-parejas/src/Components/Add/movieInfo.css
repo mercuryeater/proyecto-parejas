@@ -1,4 +1,14 @@
-.movie-info{
-    display: flex;
-    gap: 15px;
+.movie-info {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: stretch;
+  align-items: stretch;
+  /* gap: 80px; */
+}
+
+.movie-info__description {
+  border: 1px solid black;
+  /* align-items: center; */
+  /* padding: 40px; */
 }

@@ -1,8 +1,9 @@
 import "./MovieList.css";
 import { useState } from "react";
-import MovieInfo from "../Add/movieInfo"
+// import MovieInfo from "../Add/movieInfo"
 
 function MovieList({movieList=[] }, onSelectMovie) {
+  // const { name, rating, genre, year, onSelectMovie } = props;
 
     const [updatedMovies, setUpdatedMovies] = useState(movieList)
 
@@ -36,12 +37,12 @@ function MovieList({movieList=[] }, onSelectMovie) {
         <tbody>        
           {movieList.map( (movie) => (
               <tr key={movie.id} className="movie__list__item">
-              <MovieInfo
-                  name={movie.name}
-                  year={movie.year}
-                  genre={movie.genre}
-                  rating={movie.rating}
-                />
+              
+                  <td>{movie.name}</td>
+                  <td>{movie.year}</td>
+                  <td>{movie.genre}</td>
+                  <td>{movie.rating}</td>
+                
                   <td><button onClick={ () =>{handleDelete(index)}}>borrar</button>
                   <button onClick={handleEdit}>editar</button></td>
               </tr>
