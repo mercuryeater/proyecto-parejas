@@ -24,26 +24,29 @@ function MovieList({movieList=[] }, onSelectMovie) {
     <div>
       <h2>Películas</h2>
       <table className="movie__list">
-        <tr className="movie__list__titles">
-            <th>Movie</th>
-            <th>Year</th>
-            <th>Genre</th>
-            <th>Rating</th>
-        </tr>
-        
-        {movieList.map( (movie) => (
-            <div key={movie.id} className="movie__list__item">
+        <thead>
+          <tr className="movie__list__titles">
+              <th>Movie</th>
+              <th>Year</th>
+              <th>Genre</th>
+              <th>Rating</th>
+          </tr>
+        </thead>
+
+        <tbody>        
+          {movieList.map( (movie) => (
+              <tr key={movie.id} className="movie__list__item">
               <MovieInfo
-                name={movie.name}
-                year={movie.year}
-                genre={movie.genre}
-                rating={movie.rating}
+                  name={movie.name}
+                  year={movie.year}
+                  genre={movie.genre}
+                  rating={movie.rating}
                 />
-                <div><button onClick={ () =>{handleDelete(index)}}>borrar</button>
-                <button onClick={handleEdit}>editar</button></div>
-            </div>
-            // onClick={()=>{handleClick(ID)}}
-        ))}        
+                  <td><button onClick={ () =>{handleDelete(index)}}>borrar</button>
+                  <button onClick={handleEdit}>editar</button></td>
+              </tr>
+        ))}
+        </tbody>        
       </table>
     </div>
   );
