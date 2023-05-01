@@ -64,6 +64,7 @@ function AddMovie({onAddMovie, selectedMovie}) {
                 required
                 onChange={handleChange}
                 value = {movie.rating}
+                min="1" max="10"
               />
             </div>
             <div className="add-form__column">
@@ -86,6 +87,7 @@ function AddMovie({onAddMovie, selectedMovie}) {
                 placeholder="Add movie year"
                 onChange={handleChange}
                 value = {movie.year}
+                max= "2023"
               />
             </div>
           </div>
