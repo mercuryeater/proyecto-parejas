@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState} from "react";
 import "./movieForm.css";
 
 const defaultMovie = {
@@ -39,8 +39,7 @@ function AddMovie({ onAddMovie, selectedMovie, isEditing }) {
     });
   };
 
-  // const handleReset = ()=>{
-  // }
+  
 
   return (
     <div className="container">

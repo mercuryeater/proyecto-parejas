@@ -8,6 +8,8 @@ input {
   margin-left: 10px;
 }
 .container {
+  margin: 0 auto;
+  margin-top: 20px;
   width: 400px;
   height: 500px;
   border: 1px dotted teal;
@@ -41,7 +43,7 @@ input {
   border: 1px solid teal;
   color: teal;
   margin-top: 20px;
-  margin-left: 170px;
+  margin-left: 160px;
   font-weight: bold;
 }
 

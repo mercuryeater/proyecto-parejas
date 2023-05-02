@@ -1,5 +1,5 @@
 import "./MovieList.css";
-import { useState } from "react";
+import { useState} from "react";
 
 function MovieList({ movieList = [], onSelectedMovie }) {
   const [updatedMovies, setUpdatedMovies] = useState(movieList);
