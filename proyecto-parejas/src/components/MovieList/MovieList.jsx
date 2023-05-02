@@ -6,15 +6,13 @@ function MovieList({ movieList = [], onSelectedMovie, onDeleteMovie }) {
 
   const handleDelete = (id) => {
     console.log("Delete pressed");
-    console.log(`El id es: ${id}`)
-    //YA IDENTIFICA EL ID DEL BOTON DE BORRAR, AHORA QUE RECORRA 
-    //Y FILTRE FUERA EL QUE TENGA EL MISMO ID
+    console.log(`El id es: ${id}`);
     movieList.map((movie) => {
       if (movie.id === id) {
-        const newmovies = movieList.filter(movie => movie.id !== id)
-        onDeleteMovie(newmovies);
+        const newMovies = movieList.filter(movie => movie.id !== id)
+        onDeleteMovie(newMovies);
       } 
-    })
+    });
 
   };
 

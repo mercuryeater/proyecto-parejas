@@ -4,6 +4,7 @@ import AddMovie from "./Components/Add/MovieForm";
 import MovieList from "./Components/MovieList/MovieList";
 import { movies as movieList } from "./assets/data";
 import Header from "./Components/Header/Header";
+import EditMovie from "./Components/EditMovie/EditMovie";
 
 function App() {
   const [movies, setMovies] = useState(movieList);
@@ -16,10 +17,13 @@ function App() {
   };
 
   const handleSelect = (movie) => {
-    setSelectedMovie(Object.assign({},movie));
+    setSelectedMovie(Object.assign({}, movie));
     setIsEditing(true);
-    // console.log(movie);                                                                  
   };
+
+  const handleEditMovie = (newArr) => {
+    setMovies(newArr);
+  }
 
   const deleteMovie = (newArr) => {
     setMovies(newArr);
@@ -28,9 +32,29 @@ function App() {
   return (
     <>
       <Header />
+      <div>
+        <button onClick={() => setIsEditing(false)}>Add</button>
+      </div>
       <div className="movieContainer">
-      <MovieList movieList={movies} onSelectedMovie={handleSelect} onDeleteMovie={deleteMovie} />
-      <AddMovie onAddMovie={handleAddMovie} selectedMovie={selectedMovie} isEditing={isEditing} />
+        <MovieList
+          movieList={movies}
+          onSelectedMovie={handleSelect}
+          onDeleteMovie={deleteMovie}
+        />
+        {isEditing ? (
+          <EditMovie
+            onEditMovie={handleEditMovie}
+            selectedMovie={selectedMovie}
+            isEditing={isEditing}
+            movies={movies}
+          />
+        ) : (
+          <AddMovie
+            onAddMovie={handleAddMovie}
+            selectedMovie={selectedMovie}
+            isEditing={isEditing}
+          />
+        )}
       </div>
     </>
   );
