@@ -91,6 +91,7 @@ function AddMovie({ onAddMovie, selectedMovie, isEditing }) {
               onChange={handleChange}
               value={movie.rating}
             >
+              <option value="head"></option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
