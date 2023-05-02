@@ -12,3 +12,12 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/border-collapse
 - Tables layout:
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout
+
+- indexOf: 
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
+
+```
+indexOf(searchElement)
+indexOf(searchElement, fromIndex)
+```

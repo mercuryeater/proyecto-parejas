@@ -7,8 +7,8 @@ const defaultMovie = {
   genre: "",
   rating: "",
 };
-function AddMovie({ onAddMovie, selectedMovie }) {
-  const [movie, setMovie] = useState(defaultMovie);
+function AddMovie({ onAddMovie, selectedMovie, isEditing }) {
+  const [movie, setMovie] = useState(isEditing ? { ...selectedMovie } : defaultMovie);
 
   const handleAdd = (event) => {
     event.preventDefault();
@@ -23,8 +23,16 @@ function AddMovie({ onAddMovie, selectedMovie }) {
     setMovie(defaultMovie);
   };
 
+  const handleUpdate = (selectedMovie) => {
+    // console.log(`Esto es selectedMovie: ${selectedMovie}`)
+  }
+
   const handleChange = (event) => {
     const { name, value } = event.target;
+
+    
+
+
     setMovie({
       ...movie,
       [name]: value,
@@ -36,7 +44,7 @@ function AddMovie({ onAddMovie, selectedMovie }) {
 
   return (
     <div className="container">
-      <h2 className="add-form__title">Add New Movie</h2>
+      <h2 className="add-form__title">{isEditing ? "Edit Movie" : "Add New Movie"}</h2>
       <form className="add-form" onSubmit={handleAdd}>
         <div>
           <div className="add-form__column">
@@ -90,9 +98,12 @@ function AddMovie({ onAddMovie, selectedMovie }) {
           </div>
         </div>
 
-        <button type="submit" className="add-form__button">
+        {isEditing ? <button type="submit" className="add-form__button" onClick={handleUpdate}>
+          Update
+        </button> : <button type="submit" className="add-form__button">
           Add
-        </button>
+        </button>}
+        
       </form>
     </div>
   );

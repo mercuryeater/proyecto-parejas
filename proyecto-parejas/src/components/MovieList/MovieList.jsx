@@ -4,17 +4,22 @@ import { useState } from "react";
 function MovieList({ movieList = [], onSelectedMovie }) {
   const [updatedMovies, setUpdatedMovies] = useState(movieList);
 
-  const handleDelete = (index) => {
+  const handleDelete = (id) => {
     console.log("Delete pressed");
-    const toDeleteMovie = [...updatedMovies];
-    toDeleteMovie.splice(index, 1);
-    setUpdatedMovies(toDeleteMovie);
+    console.log(`El id es: ${id}`)
+    //YA IDENTIFICA EL ID DEL BOTON DE BORRAR, AHORA QUE RECORRA 
+    //Y BORRE EL QUE TENGA EL MISMO ID
+    movieList.map((movie) => {
+      if (movie.id === id) {
+        // console.log(movieList.indexOf(movie))
+        setUpdatedMovies(movieList.splice(movieList.indexOf(movie), 1));
+      }
+    })
+
   };
 
   const handleEdit = (movie) => {
     onSelectedMovie(movie);
-    console.log("Edit pressed");
-    // console.log(updatedMovies);
   };
 
   return (
@@ -39,7 +44,7 @@ function MovieList({ movieList = [], onSelectedMovie }) {
               <td className="movie__list__item--rating">{movie.rating}</td>
 
               <td>
-                <button onClick={() => {handleDelete(index)}}>borrar</button>
+                <button onClick={() => {handleDelete(movie.id)}}>borrar</button>
                 <button onClick={() => handleEdit(movie)}>editar</button>
               </td>
             </tr>
