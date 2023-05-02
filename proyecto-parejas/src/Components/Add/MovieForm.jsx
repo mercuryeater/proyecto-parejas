@@ -30,7 +30,7 @@ function AddMovie({ onAddMovie, selectedMovie, isEditing }) {
   };
 
   const handleChange = (event) => {
-    const { name, value } = event.target;
+    const { name, value } = event.target; 
 
     setMovie({
       ...movie,
