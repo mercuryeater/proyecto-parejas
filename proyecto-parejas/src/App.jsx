@@ -29,8 +29,10 @@ function App() {
   return (
     <>
       <Header />
-      <AddMovie onAddMovie={handleAddMovie} selectedMovie={selectedMovie} isEditing={isEditing} />
+      <div className="movieContainer">
       <MovieList movieList={movies} onSelectedMovie={handleSelect} />
+      <AddMovie onAddMovie={handleAddMovie} selectedMovie={selectedMovie} isEditing={isEditing} />
+      </div>
     </>
   );
 }

@@ -58,6 +58,30 @@ function AddMovie({ onAddMovie, selectedMovie, isEditing }) {
             />
           </div>
           <div className="add-form__column">
+            <label className="add-form__label">Year</label>
+            <input
+              type="number"
+              name="year"
+              className="add-form__input"
+              placeholder="Add Movie Year"
+              onChange={handleChange}
+              value={movie.year}
+              min="1895"
+              max="2023"
+            />
+          </div>
+          <div className="add-form__column">
+            <label className="add-form__label">Genre</label>
+            <input
+              type="text"
+              name="genre"
+              className="add-form__input"
+              placeholder="Add Genre"
+              onChange={handleChange}
+              value={movie.genre}
+            />
+          </div>
+          <div className="add-form__column">
             <label className="add-form__label">Rating</label>
             <select
               name="rating"
@@ -78,30 +102,6 @@ function AddMovie({ onAddMovie, selectedMovie, isEditing }) {
               <option value="9">9</option>
               <option value="9">10</option>
             </select>
-          </div>
-          <div className="add-form__column">
-            <label className="add-form__label">Genre</label>
-            <input
-              type="text"
-              name="genre"
-              className="add-form__input"
-              placeholder="Add Genre"
-              onChange={handleChange}
-              value={movie.genre}
-            />
-          </div>
-          <div className="add-form__column">
-            <label className="add-form__label">Year</label>
-            <input
-              type="number"
-              name="year"
-              className="add-form__input"
-              placeholder="Add movie year"
-              onChange={handleChange}
-              value={movie.year}
-              min="1895"
-              max="2023"
-            />
           </div>
         </div>
 
