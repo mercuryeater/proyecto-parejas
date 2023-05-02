@@ -18,19 +18,18 @@ function App() {
   const handleSelect = (movie) => {
     setSelectedMovie(movie);
     setIsEditing(true);
-    console.log(movie);
-    console.log(`Esto es selectedMovie: ${selectedMovie}`); 
+    // console.log(movie);                                                                  
   };
 
-  // const deleteMovie = (toDeleteMovie) => {
-  //   setMovies([toDeleteMovie]);
-  // };
+  const deleteMovie = (newArr) => {
+    setMovies(newArr);
+  };
 
   return (
     <>
       <Header />
       <AddMovie onAddMovie={handleAddMovie} selectedMovie={selectedMovie} isEditing={isEditing} />
-      <MovieList movieList={movies} onSelectedMovie={handleSelect} />
+      <MovieList movieList={movies} onSelectedMovie={handleSelect} onDeleteMovie={deleteMovie} />
     </>
   );
 }

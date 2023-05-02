@@ -1,25 +1,26 @@
 import "./MovieList.css";
 import { useState } from "react";
 
-function MovieList({ movieList = [], onSelectedMovie }) {
+function MovieList({ movieList = [], onSelectedMovie, onDeleteMovie }) {
   const [updatedMovies, setUpdatedMovies] = useState(movieList);
 
   const handleDelete = (id) => {
     console.log("Delete pressed");
     console.log(`El id es: ${id}`)
     //YA IDENTIFICA EL ID DEL BOTON DE BORRAR, AHORA QUE RECORRA 
-    //Y BORRE EL QUE TENGA EL MISMO ID
+    //Y FILTRE FUERA EL QUE TENGA EL MISMO ID
     movieList.map((movie) => {
       if (movie.id === id) {
-        // console.log(movieList.indexOf(movie))
-        setUpdatedMovies(movieList.splice(movieList.indexOf(movie), 1));
-      }
+        const newmovies = movieList.filter(movie => movie.id !== id)
+        onDeleteMovie(newmovies);
+      } 
     })
 
   };
 
   const handleEdit = (movie) => {
     onSelectedMovie(movie);
+    console.log(movieList)
   };
 
   return (
