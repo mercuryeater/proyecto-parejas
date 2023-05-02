@@ -1,4 +1,4 @@
-import { useState} from "react";
+import { useState } from "react";
 import "./movieForm.css";
 
 const defaultMovie = {
@@ -8,7 +8,9 @@ const defaultMovie = {
   rating: "",
 };
 function AddMovie({ onAddMovie, selectedMovie, isEditing }) {
-  const [movie, setMovie] = useState(isEditing ? { ...selectedMovie } : defaultMovie);
+  const [movie, setMovie] = useState(
+    isEditing ? { ...selectedMovie } : defaultMovie
+  );
 
   const handleAdd = (event) => {
     event.preventDefault();
@@ -25,13 +27,10 @@ function AddMovie({ onAddMovie, selectedMovie, isEditing }) {
 
   const handleUpdate = (selectedMovie) => {
     // console.log(`Esto es selectedMovie: ${selectedMovie}`)
-  }
+  };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-
-    
-
 
     setMovie({
       ...movie,
@@ -39,11 +38,11 @@ function AddMovie({ onAddMovie, selectedMovie, isEditing }) {
     });
   };
 
-  
-
   return (
     <div className="container">
-      <h2 className="add-form__title">{isEditing ? "Edit Movie" : "Add New Movie"}</h2>
+      <h2 className="add-form__title">
+        {isEditing ? "Edit Movie" : "Add New Movie"}
+      </h2>
       <form className="add-form" onSubmit={handleAdd}>
         <div>
           <div className="add-form__column">
@@ -60,17 +59,25 @@ function AddMovie({ onAddMovie, selectedMovie, isEditing }) {
           </div>
           <div className="add-form__column">
             <label className="add-form__label">Rating</label>
-            <input
-              type="number"
+            <select
               name="rating"
-              placeholder="Add Rating 0/10"
-              className="add-form__input"
+              id="rating"
+              className="add-form__input--rating"
               required
               onChange={handleChange}
               value={movie.rating}
-              min="1"
-              max="10"
-            />
+            >
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="9">10</option>
+            </select>
           </div>
           <div className="add-form__column">
             <label className="add-form__label">Genre</label>
@@ -92,17 +99,25 @@ function AddMovie({ onAddMovie, selectedMovie, isEditing }) {
               placeholder="Add movie year"
               onChange={handleChange}
               value={movie.year}
+              min="1895"
               max="2023"
             />
           </div>
         </div>
 
-        {isEditing ? <button type="submit" className="add-form__button" onClick={handleUpdate}>
-          Update
-        </button> : <button type="submit" className="add-form__button">
-          Add
-        </button>}
-        
+        {isEditing ? (
+          <button
+            type="submit"
+            className="add-form__button"
+            onClick={handleUpdate}
+          >
+            Update
+          </button>
+        ) : (
+          <button type="submit" className="add-form__button">
+            Add
+          </button>
+        )}
       </form>
     </div>
   );

@@ -38,6 +38,14 @@ input {
   width: 300px;
   margin-left: 35px;
 }
+.add-form__input--rating {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 8px;
+  width: 320px;
+  margin-left: 35px;
+}
 
 .add-form__button {
   border: 1px solid teal;

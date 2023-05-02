@@ -16,14 +16,14 @@ export const movies = [
   {
     id: 3,
     name: "Lord of the rings: the two towers",
-    rating: "8.8",
+    rating: "9",
     genre: "Action",
     year: "2002",
   },
   {
     id: 4,
     name: "Lord of the rings: the fellowship of the rings",
-    rating: "8.1",
+    rating: "8",
     genre: "Action",
     year: "1998",
   },
