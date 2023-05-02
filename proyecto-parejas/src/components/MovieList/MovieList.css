@@ -2,6 +2,11 @@ h1 {
   font-size: 20px;
   text-align: start;
 }
+.container__title {
+  color: teal;
+  text-align: center;
+  font-weight: bolder;
+}
 
 .movie__list {
   table-layout: fixed;
@@ -13,8 +18,9 @@ h1 {
 }
 
 .movie__list__titles {
-  font-size: 19px;
+  font-size: 20px;
   font-weight: bolder;
+  color: teal;
 }
 .movie__list__item--name {
   text-align: left;

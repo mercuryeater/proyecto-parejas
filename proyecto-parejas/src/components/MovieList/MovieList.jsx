@@ -24,7 +24,7 @@ function MovieList({ movieList = [], onSelectedMovie }) {
 
   return (
     <div>
-      <h2>Películas</h2>
+      <h2 className="container__title">Movies</h2>
       <table className="movie__list">
         <thead>
           <tr className="movie__list__titles">
@@ -44,8 +44,8 @@ function MovieList({ movieList = [], onSelectedMovie }) {
               <td className="movie__list__item--rating">{movie.rating}</td>
 
               <td>
-                <button onClick={() => {handleDelete(movie.id)}}>borrar</button>
-                <button onClick={() => handleEdit(movie)}>editar</button>
+                <button onClick={() => handleEdit(movie)}>edit</button>
+                <button onClick={() => {handleDelete(movie.id)}}>delete</button>
               </td>
             </tr>
           ))}
