@@ -16,7 +16,7 @@ function App() {
   };
 
   const handleSelect = (movie) => {
-    setSelectedMovie(movie);
+    setSelectedMovie(Object.assign({},movie));
     setIsEditing(true);
     // console.log(movie);                                                                  
   };

@@ -19,8 +19,8 @@ function MovieList({ movieList = [], onSelectedMovie, onDeleteMovie }) {
   };
 
   const handleEdit = (movie) => {
-    onSelectedMovie(movie);
-    console.log(movieList)
+    const editMovie = movie;
+    onSelectedMovie(editMovie);
   };
 
   return (
