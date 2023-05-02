@@ -15,17 +15,17 @@ export const movies = [
   },
   {
     id: 3,
-    name: "Lord of the rings: the two towers",
-    rating: "9",
-    genre: "Action",
-    year: "2002",
+    name: "Avatar",
+    year: "2009",
+    genre: "Adventure",
+    rating: "8",
   },
   {
     id: 4,
-    name: "Lord of the rings: the fellowship of the rings",
-    rating: "8",
-    genre: "Action",
-    year: "1998",
+    name: "Inception",
+    year: "2010",
+    genre: "Thriller",
+    rating: "9",
   },
   // Agregar más contactos aquí...
 ];
