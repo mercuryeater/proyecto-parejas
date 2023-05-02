@@ -22,7 +22,7 @@ function App() {
   };
 
   const handleEditMovie = (newArr) => {
-    setMovies(newArr);
+    setMovies([...movies, newArr]);
   }
 
   const deleteMovie = (newArr) => {

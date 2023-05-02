@@ -12,9 +12,11 @@ function AddMovie({ onEditMovie, selectedMovie, movies }) {
     movies.map( movie => {
         if (movie.id === selectedMovie.id) {
             // console.log(selectedMovie)
-            onEditMovie(Object.assign(movie, editedMovie))            
+            setEditedMovie(Object.assign(movie, editedMovie))           
         }
     })
+    // console.log(editedMovie)
+    onEditMovie(editedMovie)
 
   };
 
@@ -87,7 +89,7 @@ function AddMovie({ onEditMovie, selectedMovie, movies }) {
               <option value="7">7</option>
               <option value="8">8</option>
               <option value="9">9</option>
-              <option value="9">10</option>
+              <option value="10">10</option>
             </select>
           </div>
         </div>
