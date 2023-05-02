@@ -1,17 +1,30 @@
 #root {
-  width: 100%;  
+  width: 370px;
   margin: 0 auto;
   padding: 2rem;
 }
 
-.everything {
+/* .everything {
   display: inline-block;
   align-items: center;
   width: 100%;
+} */
+
+.movieContainer {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
-.movieContainer{
-display: grid;
-grid-template-columns: 2fr 1fr;
-gap: 15px;
+@media (min-width: 376px) {
+  #root {
+    width: 100%;
+  }
+}
+
+@media (min-width: 860px) {
+  .movieContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+  }
 }

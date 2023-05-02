@@ -1,12 +1,9 @@
-h1 {
-  font-size: 20px;
-  text-align: start;
-}
 .container__title {
   color: teal;
   text-align: center;
   font-weight: bolder;
   text-shadow: 2px 2px 5px gray;
+  font-size: 17px;
 }
 
 .movie__list {
@@ -16,27 +13,32 @@ h1 {
   border: 1px solid rgb(195, 195, 195);
   border-radius: 10px;
   box-shadow: 10px 10px 15px gray;
-  /* border-collapse: collapse;     */
 }
 
 .movie__list__titles {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bolder;
   color: teal;
 }
 .movie__list__item--name {
   text-align: left;
-  padding-left: 12px;
+  padding-left: 4px;
   font-weight: bolder;
+  font-size: 14px;
 }
 .movie__list__item--year {
   color: gray;
+  font-size: 14px;
+  padding-left: 18px;
 }
 .movie__list__item--genre {
   color: gray;
+  font-size: 14px;
+  padding-left: 10px;
 }
 .movie__list__item--rating {
   color: gray;
+  font-size: 14px;
 }
 
 th {
@@ -49,7 +51,7 @@ td {
 
 td button {
   color: teal;
-  font-size: 15px;
+  font-size: 12px;
   margin: 5px;
   padding: 2px 6px;
   border: 1px solid teal;
@@ -58,4 +60,33 @@ td button {
 td button:hover {
   background-color: teal;
   color: white;
+}
+
+@media (min-width: 376px) {
+  .container__title {
+    font-size: 20px;
+  }
+  .movie__list__titles {
+    font-size: 20px;
+  }
+  .movie__list__item--name {
+    font-size: 16px;
+    padding-left: 12px;
+  }
+  .movie__list__item--year {
+    font-size: 16px;
+    padding-left: 0;
+  }
+  .movie__list__item--genre {
+    font-size: 16px;
+    padding-left: 0;
+  }
+  .movie__list__item--rating {
+    font-size: 16px;
+  }
+  td button {
+    font-size: 15px;
+    margin: 5px;
+    padding: 2px 6px;
+  }
 }
