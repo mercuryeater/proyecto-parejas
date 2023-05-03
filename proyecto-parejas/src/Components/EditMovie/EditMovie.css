@@ -78,13 +78,13 @@ td {
 
 @media (min-width: 376px) {
   .update__button {
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: 100px;
   }
 
   .exit__button {
     margin-left: 10px;
     height: 50px;
-    margin-top: 12px;
+    margin-top: 20px;
   }
 }
