@@ -1,4 +1,4 @@
-import { useState , useEffect} from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import AddMovie from "./Components/Add/MovieForm";
 import MovieList from "./Components/MovieList/MovieList";
@@ -21,10 +21,9 @@ function App() {
     setIsEditing(true);
   };
 
-    const handleEditMovie = () => {
-      setMovies([...movies]);
-    }
- 
+  const handleEditMovie = () => {
+    setMovies([...movies]);
+  };
 
   const deleteMovie = (newArr) => {
     setMovies(newArr);
@@ -41,20 +40,19 @@ function App() {
         />
         {isEditing ? (
           <EditMovie
-          onEditMovie={handleEditMovie}
-          selectedMovie={selectedMovie}
-          isEditing={isEditing}
-          movies={movies}
-          setIsEditing = {setIsEditing}
+            onEditMovie={handleEditMovie}
+            selectedMovie={selectedMovie}
+            isEditing={isEditing}
+            movies={movies}
+            setIsEditing={setIsEditing}
           />
-          ) : (
-            <AddMovie
+        ) : (
+          <AddMovie
             onAddMovie={handleAddMovie}
             selectedMovie={selectedMovie}
             isEditing={isEditing}
-            />
-            )}
-          
+          />
+        )}
       </div>
     </>
   );

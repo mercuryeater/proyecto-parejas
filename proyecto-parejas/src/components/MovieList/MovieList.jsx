@@ -1,5 +1,5 @@
 import "./MovieList.css";
-import { useState} from "react";
+import { useState } from "react";
 
 function MovieList({ movieList = [], onSelectedMovie, onDeleteMovie }) {
   const [updatedMovies, setUpdatedMovies] = useState(movieList);
@@ -9,11 +9,10 @@ function MovieList({ movieList = [], onSelectedMovie, onDeleteMovie }) {
     console.log(`El id es: ${id}`);
     movieList.map((movie) => {
       if (movie.id === id) {
-        const newMovies = movieList.filter(movie => movie.id !== id)
+        const newMovies = movieList.filter((movie) => movie.id !== id);
         onDeleteMovie(newMovies);
-      } 
+      }
     });
-
   };
 
   const handleEdit = (movie) => {
@@ -44,7 +43,13 @@ function MovieList({ movieList = [], onSelectedMovie, onDeleteMovie }) {
 
               <td>
                 <button onClick={() => handleEdit(movie)}>edit</button>
-                <button onClick={() => {handleDelete(movie.id)}}>delete</button>
+                <button
+                  onClick={() => {
+                    handleDelete(movie.id);
+                  }}
+                >
+                  delete
+                </button>
               </td>
             </tr>
           ))}
