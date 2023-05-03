@@ -1,23 +1,21 @@
 import { useState } from "react";
 import "./EditMovie.css";
 
-
-function AddMovie({ onEditMovie, selectedMovie, movies }) {
+function AddMovie({ onEditMovie, selectedMovie, movies, setIsEditing }) {
   const [editedMovie, setEditedMovie] = useState(selectedMovie);
 
   const handleUpdate = (event) => {
     event.preventDefault();
 
     //AQUI DEBO HACER QUE SE EDITE Y UPDATEE EL SELECCIONADO
-    movies.map( movie => {
-        if (movie.id === selectedMovie.id) {
-            // console.log(selectedMovie)
-            setEditedMovie(Object.assign(movie, editedMovie))           
-        }
-    })
+    movies.map((movie) => {
+      if (movie.id === selectedMovie.id) {
+        // console.log(selectedMovie)
+        setEditedMovie(Object.assign(movie, editedMovie));
+      }
+    });
     // console.log(editedMovie)
-    onEditMovie(editedMovie)
-
+    onEditMovie(editedMovie);
   };
 
   const handleChange = (event) => {
@@ -93,10 +91,14 @@ function AddMovie({ onEditMovie, selectedMovie, movies }) {
             </select>
           </div>
         </div>
-
-        <button type="submit" className="add-form__button">
-          Update
-        </button>
+        <div className="buttons">
+          <button type="submit" className="update__button">
+            Update
+          </button>
+          <button onClick={() => setIsEditing(false)} className="exit__button">
+            Exit
+          </button>
+        </div>
       </form>
     </div>
   );

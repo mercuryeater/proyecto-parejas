@@ -34,14 +34,3 @@
 }
 }
 
-button {
-  color: teal;
-  font-weight: bold; 
-  margin-top: 25px;
-  border: 1px solid teal;
-}
-
-button:hover {
-  background-color: teal;
-  color: white;
-}

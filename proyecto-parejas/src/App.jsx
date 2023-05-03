@@ -33,9 +33,6 @@ function App() {
   return (
     <>
       <Header />
-      <div>
-        <button onClick={() => setIsEditing(false)}>Add</button>
-      </div>
       <div className="movieContainer">
         <MovieList
           movieList={movies}
@@ -44,18 +41,20 @@ function App() {
         />
         {isEditing ? (
           <EditMovie
-            onEditMovie={handleEditMovie}
-            selectedMovie={selectedMovie}
-            isEditing={isEditing}
-            movies={movies}
+          onEditMovie={handleEditMovie}
+          selectedMovie={selectedMovie}
+          isEditing={isEditing}
+          movies={movies}
+          setIsEditing = {setIsEditing}
           />
-        ) : (
-          <AddMovie
+          ) : (
+            <AddMovie
             onAddMovie={handleAddMovie}
             selectedMovie={selectedMovie}
             isEditing={isEditing}
-          />
-        )}
+            />
+            )}
+          
       </div>
     </>
   );
