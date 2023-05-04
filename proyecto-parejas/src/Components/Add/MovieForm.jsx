@@ -18,7 +18,7 @@ function AddMovie({ onAddMovie, isEditing }) {
       id: Date.now(),
     };
     onAddMovie(newMovie);
-
+    
     // Clear form
     setMovie(defaultMovie);
   };
