@@ -7,11 +7,29 @@ const defaultMovie = {
   genre: "",
   rating: "",
 };
-function AddMovie({ onAddMovie, isEditing }) {
+function AddMovie({ onAddMovie }) {
   const [movie, setMovie] = useState(defaultMovie);
 
-  const handleAdd = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
+
+    try {
+      const options = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(movie),
+      }
+      const url = `${import.meta.env.VITE_BASE_URL}api/movies`;
+
+      const response = await fetch(url, options);
+      const data = await response.json();
+      console.log(data)
+      setMovie(defaultMovie);
+    } catch (error){
+      console.log('error')
+    }
 
     const newMovie = {
       ...movie,
@@ -35,7 +53,7 @@ function AddMovie({ onAddMovie, isEditing }) {
   return (
     <div className="container">
       <h2 className="add-form__title">Add New Movie</h2>
-      <form className="add-form" onSubmit={handleAdd}>
+      <form className="add-form" onSubmit={handleSubmit}>
         <div>
           <div className="add-form__column">
             <label className="add-form__label">Movie</label>

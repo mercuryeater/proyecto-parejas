@@ -2,7 +2,9 @@
   color: teal;
   text-align: center;
   font-weight: bolder;
-  text-shadow: 2px 2px 5px gray;
+  /* text-shadow: 2px 2px 5px gray; */
+  /* ESTABA INTENTANDO PONER TODO EN UNA TABLA MAS GRANDE
+  Y QUITAR ESE SOMBREADO */
   font-size: 17px;
 }
 

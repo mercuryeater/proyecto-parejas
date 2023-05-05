@@ -4,8 +4,26 @@ import "./EditMovie.css";
 function AddMovie({ onEditMovie, selectedMovie, movies, setIsEditing }) {
   const [editedMovie, setEditedMovie] = useState(selectedMovie);
 
-  const handleUpdate = (event) => {
+  const handleUpdate = async (event) => {
     event.preventDefault();
+
+    try {
+      const options = {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(editedMovie),
+      }
+
+      const url = `${import.meta.env.VITE_BASE_URL}api/movies`;
+
+      const response = await fetch(url, options);
+      const data = await response.json();
+      console.log(data)
+    } catch (error){
+      console.log(error)
+    }
 
     //AQUI DEBO HACER QUE SE EDITE Y UPDATEE EL SELECCIONADO
     movies.map((movie) => {
