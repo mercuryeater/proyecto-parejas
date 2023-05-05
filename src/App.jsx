@@ -2,12 +2,12 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import AddMovie from "./Components/Add/MovieForm";
 import MovieList from "./Components/MovieList/MovieList";
-import { movies as movieList } from "./assets/data";
+// import { movies as movieList } from "./assets/data";
 import Header from "./Components/Header/Header";
 import EditMovie from "./Components/EditMovie/EditMovie";
 
 function App() {
-  const [movies, setMovies] = useState(movieList);
+  const [movies, setMovies] = useState();
   const [selectedMovie, setSelectedMovie] = useState({});
 
   const [isEditing, setIsEditing] = useState(false);
@@ -32,7 +32,6 @@ function App() {
   useEffect(() => {
     const fetchMovies = async () => {
       const url = `${import.meta.env.VITE_BASE_URL}/api/movies`;
-
       try {
         const response = await fetch(url);
         const data = await response.json();
@@ -41,7 +40,7 @@ function App() {
         console.log(error);
       }
     };
-    fetchMovies(); 
+    fetchMovies();
   }, []);
 
   return (

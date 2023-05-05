@@ -9,20 +9,20 @@ function AddMovie({ onEditMovie, selectedMovie, movies, setIsEditing }) {
 
     try {
       const options = {
-        method: 'PATCH',
+        method: "PATCH",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(editedMovie),
-      }
+      };
 
-      const url = `${import.meta.env.VITE_BASE_URL}/api/movies`;
+      const url = `${import.meta.env.VITE_BASE_URL}/api/movies/:id`;
 
       const response = await fetch(url, options);
       const data = await response.json();
-      console.log(data)
-    } catch (error){
-      console.log(error)
+      console.log(data);
+    } catch (error) {
+      console.log(error);
     }
 
     //AQUI DEBO HACER QUE SE EDITE Y UPDATEE EL SELECCIONADO
