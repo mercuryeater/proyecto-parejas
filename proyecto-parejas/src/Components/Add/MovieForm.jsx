@@ -46,6 +46,7 @@ function AddMovie({ onAddMovie, isEditing }) {
               className="add-form__input"
               required
               onChange={handleChange}
+              value={movie.name}
             />
           </div>
           <div className="add-form__column">
@@ -58,6 +59,7 @@ function AddMovie({ onAddMovie, isEditing }) {
               onChange={handleChange}
               min="1895"
               max="2023"
+              value={movie.year}
             />
           </div>
           <div className="add-form__column">
@@ -68,6 +70,7 @@ function AddMovie({ onAddMovie, isEditing }) {
               className="add-form__input"
               placeholder="Add Genre"
               onChange={handleChange}
+              value={movie.genre}
             />
           </div>
           <div className="add-form__column">
@@ -78,6 +81,7 @@ function AddMovie({ onAddMovie, isEditing }) {
               className="add-form__input--rating"
               required
               onChange={handleChange}
+              value={movie.rating}
             >
               <option value="head"></option>
               <option value="1">1</option>
