@@ -21,7 +21,7 @@ function AddMovie({ onAddMovie }) {
         },
         body: JSON.stringify(movie),
       }
-      const url = `${import.meta.env.VITE_BASE_URL}api/movies`;
+      const url = `${import.meta.env.VITE_BASE_URL}/api/movies`;
 
       const response = await fetch(url, options);
       const data = await response.json();

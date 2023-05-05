@@ -31,7 +31,7 @@ function App() {
 
   useEffect(() => {
     const fetchMovies = async () => {
-      const url = `${import.meta.env.VITE_BASE_URL}api/movies`;
+      const url = `${import.meta.env.VITE_BASE_URL}/api/movies`;
 
       try {
         const response = await fetch(url);
