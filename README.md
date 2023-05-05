@@ -2,12 +2,16 @@
 ## This is a solution to the *proyecto parejas React* project of the Make It Real course.
 
 ## The challenge
-Create an front end page using React
+Create a front end page using React
 
 ## Screenshot
 ![print screen](./assets/print-screen.png)
 ## Our process
 ### Built with
+### Technologies:
+- React
+- Express
+- Git
 - Semantic markup using vscode editor
 - Express NodeJs using vs code
 - Postman
@@ -17,7 +21,8 @@ Create an front end page using React
 We learn and practice how to create an Front End page using React
 
 ## Authors
-Juan David Peña  - Federico Córdoba
+- Federico Córdoba
+- Juan David Peña  
 github - @juandape  - @mercuryeater
 email - juandavidp76@hotmail.com - 
 
