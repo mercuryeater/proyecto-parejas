@@ -46,6 +46,10 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
 
+- React + Fetch - HTTP DELETE Request Examples: 
+
+https://jasonwatmore.com/post/2020/11/11/react-fetch-http-delete-request-examples
+
 ```
 indexOf(searchElement)
 indexOf(searchElement, fromIndex)

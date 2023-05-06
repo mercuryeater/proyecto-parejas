@@ -28,7 +28,6 @@ function AddMovie({ onEditMovie, selectedMovie, movies, setIsEditing }) {
     //AQUI DEBO HACER QUE SE EDITE Y UPDATEE EL SELECCIONADO
     movies.map((movie) => {
       if (movie.id === selectedMovie.id) {
-        // console.log(selectedMovie)
         setEditedMovie(Object.assign(movie, editedMovie));
       }
     });

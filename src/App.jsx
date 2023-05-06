@@ -65,6 +65,7 @@ function App() {
             onAddMovie={handleAddMovie}
             selectedMovie={selectedMovie}
             isEditing={isEditing}
+            movies={movies}
           />
         )}
       </div>

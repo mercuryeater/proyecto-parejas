@@ -7,7 +7,7 @@ const defaultMovie = {
   genre: "",
   rating: "",
 };
-function AddMovie({ onAddMovie }) {
+function AddMovie({ onAddMovie, movies }) {
   const [movie, setMovie] = useState(defaultMovie);
 
   const handleSubmit = async (event) => {
@@ -31,9 +31,16 @@ function AddMovie({ onAddMovie }) {
       console.log('error')
     }
 
+
+    function idAssignment() {
+      const lastMovie = movies[movies.length - 1]
+      const lastId = lastMovie.id;
+      return lastId + 1;
+    }
+
     const newMovie = {
       ...movie,
-      id: Date.now(),
+      id: idAssignment(),
     };
     onAddMovie(newMovie);
     
@@ -78,6 +85,7 @@ function AddMovie({ onAddMovie }) {
               min="1895"
               max="2023"
               value={movie.year}
+              required
             />
           </div>
           <div className="add-form__column">
@@ -89,6 +97,7 @@ function AddMovie({ onAddMovie }) {
               placeholder="Add Genre"
               onChange={handleChange}
               value={movie.genre}
+              required
             />
           </div>
           <div className="add-form__column">
@@ -97,11 +106,11 @@ function AddMovie({ onAddMovie }) {
               name="rating"
               id="rating"
               className="add-form__input--rating"
-              required
               onChange={handleChange}
               value={movie.rating}
+              required
             >
-              <option value="head"></option>
+              <option disabled selected value>-Select an option-</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
