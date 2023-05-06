@@ -12,7 +12,7 @@ function Header() {
             className="header__left__container__logo"
           />
         </div>
-        <h2>Personal Movie Rating</h2>
+        <h1 className="header__left__title">Personal Movie Rating</h1>
       </div>
       <div className="header__right">
         <h3>About Us</h3>

@@ -37,8 +37,8 @@ function MovieList({ movieList = [], onSelectedMovie, onDeleteMovie }) {
   };
 
   return (
-    <div>
-      <h2 className="container__title">Movies</h2>
+    <div className="list__container">
+      <h2 className="list__container__title">Your ratings...</h2>
       <table className="movie__list">
         <thead>
           <tr className="movie__list__titles">

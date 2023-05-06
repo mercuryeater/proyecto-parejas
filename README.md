@@ -50,7 +50,9 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 https://jasonwatmore.com/post/2020/11/11/react-fetch-http-delete-request-examples
 
-```
-indexOf(searchElement)
-indexOf(searchElement, fromIndex)
-```
+- FONT:
+
+https://fonts.google.com/specimen/DM+Sans
+
+
+

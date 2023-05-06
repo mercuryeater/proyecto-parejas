@@ -1,20 +1,27 @@
-.container__title {
-  color: teal;
-  text-align: center;
-  font-weight: bolder;
-  /* text-shadow: 2px 2px 5px gray; */
-  /* ESTABA INTENTANDO PONER TODO EN UNA TABLA MAS GRANDE
-  Y QUITAR ESE SOMBREADO */
-  font-size: 17px;
+.list__container {
+  box-shadow: 5px 5px 25px 0px rgb(58, 141, 218);
+  border-radius: 20px;
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.list__container__title {
+  color: rgba(9, 9, 121, 1) 23%;
+  font-size: 36px;
+  margin: 5px 0px 5px 20px;
+  align-self: flex-start;
 }
 
 .movie__list {
   table-layout: fixed;
   width: 100%;
   text-align: center;
-  border: 1px solid rgb(195, 195, 195);
+  /* border: 1px solid rgb(195, 195, 195); */
   border-radius: 10px;
-  box-shadow: 10px 10px 15px gray;
+  /* box-shadow: 10px 10px 15px gray; */
+  border-collapse: collapse;
 }
 
 .movie__list__titles {
@@ -44,11 +51,12 @@
 }
 
 th {
-  border-bottom: 2px dotted rgb(95, 95, 95);
+  /* border-bottom: 2px solid rgb(95, 95, 95); */
+  
 }
 
 td {
-  border-bottom: 1px solid rgb(195, 195, 195);
+  border-top: 1px solid rgb(195, 195, 195);
 }
 
 td button {
