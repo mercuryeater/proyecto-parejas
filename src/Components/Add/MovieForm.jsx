@@ -15,25 +15,24 @@ function AddMovie({ onAddMovie, movies }) {
 
     try {
       const options = {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(movie),
-      }
+      };
       const url = `${import.meta.env.VITE_BASE_URL}/api/movies`;
 
       const response = await fetch(url, options);
       const data = await response.json();
-      console.log(data)
+      console.log(data);
       setMovie(defaultMovie);
-    } catch (error){
-      console.log('error')
+    } catch (error) {
+      console.log("error");
     }
 
-
     function idAssignment() {
-      const lastMovie = movies[movies.length - 1]
+      const lastMovie = movies[movies.length - 1];
       const lastId = lastMovie.id;
       return lastId + 1;
     }
@@ -43,7 +42,7 @@ function AddMovie({ onAddMovie, movies }) {
       id: idAssignment(),
     };
     onAddMovie(newMovie);
-    
+
     // Clear form
     setMovie(defaultMovie);
   };
@@ -59,7 +58,9 @@ function AddMovie({ onAddMovie, movies }) {
 
   return (
     <div className="container">
-      <h2 className="add-form__title">Add New Movie</h2>
+      <div className="container__title">
+        <h2 className="container__title__text">Add New Movie</h2>
+      </div>
       <form className="add-form" onSubmit={handleSubmit}>
         <div>
           <div className="add-form__column">
@@ -110,7 +111,9 @@ function AddMovie({ onAddMovie, movies }) {
               value={movie.rating}
               required
             >
-              <option value="" disabled selected hidden >select</option>
+              <option value="" disabled selected hidden>
+                select
+              </option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>

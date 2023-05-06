@@ -22,7 +22,7 @@
 }
 
 .header__left__container {
-  width: 60px;
+  width: 80px;
   margin: 10px 20px 10px 10px;
 }
 
@@ -32,7 +32,7 @@
 }
 
 .header__left__title {
-  font-size: 30px;
+  font-size: 36px;
 }
 
 .header__right {

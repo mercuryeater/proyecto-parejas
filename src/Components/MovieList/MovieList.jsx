@@ -5,7 +5,6 @@ function MovieList({ movieList = [], onSelectedMovie, onDeleteMovie }) {
   const [updatedMovies, setUpdatedMovies] = useState(movieList);
 
   const handleDelete = async (id) => {
-
     try {
       const options = {
         method: "DELETE",
@@ -38,7 +37,9 @@ function MovieList({ movieList = [], onSelectedMovie, onDeleteMovie }) {
 
   return (
     <div className="list__container">
-      <h2 className="list__container__title">Your ratings...</h2>
+      <div className="list__container__test">
+        <h2 className="list__container__title">Your ratings...</h2>
+      </div>
       <table className="movie__list">
         <thead>
           <tr className="movie__list__titles">
@@ -46,6 +47,7 @@ function MovieList({ movieList = [], onSelectedMovie, onDeleteMovie }) {
             <th>Year</th>
             <th>Genre</th>
             <th>Rating</th>
+            <th></th>
           </tr>
         </thead>
 

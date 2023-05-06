@@ -46,7 +46,9 @@ function AddMovie({ onEditMovie, selectedMovie, movies, setIsEditing }) {
 
   return (
     <div className="container">
-      <h2 className="add-form__title">Edit Movie</h2>
+      <div className="container__title">
+        <h2 className="container__title__text">Edit Movie</h2>
+      </div>
       <form className="add-form" onSubmit={handleUpdate}>
         <div>
           <div className="add-form__column">
