@@ -110,7 +110,7 @@ function AddMovie({ onAddMovie, movies }) {
               value={movie.rating}
               required
             >
-              <option disabled selected value>-Select an option-</option>
+              <option value="" disabled selected hidden >select</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
