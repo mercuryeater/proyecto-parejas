@@ -4,9 +4,25 @@ import { useState } from "react";
 function MovieList({ movieList = [], onSelectedMovie, onDeleteMovie }) {
   const [updatedMovies, setUpdatedMovies] = useState(movieList);
 
-  const handleDelete = (id) => {
-    console.log("Delete pressed");
-    console.log(`El id es: ${id}`);
+  const handleDelete = async (id) => {
+
+    try {
+      const options = {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
+
+      const url = `${import.meta.env.VITE_BASE_URL}/api/movies/${id}`;
+
+      const response = await fetch(url, options);
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+
     movieList.map((movie) => {
       if (movie.id === id) {
         const newMovies = movieList.filter((movie) => movie.id !== id);
