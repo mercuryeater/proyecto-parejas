@@ -4,15 +4,10 @@
   padding: 2rem;
 }
 
-/* .everything {
-  display: inline-block;
-  align-items: center;
-  width: 100%;
-} */
-
 .movieContainer {
   display: grid;
   grid-template-columns: 1fr;
+  align-items: start;
 }
 
 @media (min-width: 376px) {
@@ -26,11 +21,7 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 15px;
+    align-items: start;
   }
-  .movieContainer {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 15px;
-}
 }
 
