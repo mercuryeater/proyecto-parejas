@@ -35,7 +35,7 @@
   font-size: 20px;
   font-weight: bolder;
   color: white;
-  background-color: #1C77C3;
+  background-color: #1c77c3;
 }
 .movie__list__item--name {
   text-align: left;
@@ -79,7 +79,7 @@ td button:hover {
   .container__title {
     font-size: 20px;
   }
-  
+
   .movie__list__item--name {
     font-size: 16px;
     padding-left: 12px;

@@ -31,7 +31,6 @@ function AddMovie({ onEditMovie, selectedMovie, movies, setIsEditing }) {
         setEditedMovie(Object.assign(movie, editedMovie));
       }
     });
-    // console.log(editedMovie)
     onEditMovie(editedMovie);
   };
 
@@ -74,6 +73,7 @@ function AddMovie({ onEditMovie, selectedMovie, movies, setIsEditing }) {
               value={editedMovie.year}
               min="1895"
               max="2023"
+              required
             />
           </div>
           <div className="add-form__column">
@@ -85,6 +85,7 @@ function AddMovie({ onEditMovie, selectedMovie, movies, setIsEditing }) {
               placeholder="Add Genre"
               onChange={handleChange}
               value={editedMovie.genre}
+              required
             />
           </div>
           <div className="add-form__column">
