@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import AddMovie from "./Components/Add/MovieForm";
 import MovieList from "./Components/MovieList/MovieList";
-// import { movies as movieList } from "./assets/data";
 import Header from "./Components/Header/Header";
 import EditMovie from "./Components/EditMovie/EditMovie";
 
