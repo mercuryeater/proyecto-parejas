@@ -32,6 +32,8 @@ function AddMovie({ onAddMovie, movies }) {
     }
 
     function idAssignment() {
+      //Hay un bug que cuando data del server esta vacio
+      //SE ROMPE TODO
       const lastMovie = movies[movies.length - 1];
       const lastId = lastMovie.id;
       return lastId + 1;

@@ -54,5 +54,9 @@ https://jasonwatmore.com/post/2020/11/11/react-fetch-http-delete-request-example
 
 https://fonts.google.com/specimen/DM+Sans
 
+- Disorganized blue palette:
+
+https://coolors.co/00d4ff-090979-020024-1c77c3-008080-eae8ff
+
 
 
